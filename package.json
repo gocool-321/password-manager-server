@@ -1,0 +1,47 @@
+{
+  "name": "filofaxbykartiktyagi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "env-cmd -f ./.env nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genialkartik/PassManager.git"
+  },
+  "nodemonConfig": {
+    "ignore": "./client/*"
+  },
+  "keywords": [
+    "Password-Manager",
+    "nodejs",
+    "reactjs"
+  ],
+  "author": "Kartik Tyagi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/genialkartik/PassManager/issues"
+  },
+  "homepage": "https://github.com/genialkartik/PassManager#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.1.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "env-cmd": "^10.1.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^5.12.10",
+    "twilio": "^3.63.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
